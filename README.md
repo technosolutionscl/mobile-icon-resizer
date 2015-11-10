@@ -94,6 +94,17 @@ Here's an example to generate the 512x512 app icon that should be submitted to t
       "size": "512x512",
       "folder" : "WEB"
     }
+**`filename`**
+
+This is the way to override default file name. You can also provide an empty folder name so it will be saved in the platform's root
+
+Here's an example to generate a file with a custom name:
+
+    {
+      "size": "512x512",
+      "folder" : "",
+	  "filename":"my-custom-named-file.png"
+    }
 
 **`baseRatio`**
 
@@ -160,6 +171,11 @@ Example:
           {
             "baseRatio" : "4",
             "folder" : "drawable-xxxhdpi"
+          },
+          {
+            "size": "512x512",
+            "folder" : "",
+			"filename":"playstore-icon.png"
           },
           {
             "size": "512x512",
