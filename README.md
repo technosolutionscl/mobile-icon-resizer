@@ -1,4 +1,4 @@
-# Mobile Icon Resizer 
+# Mobile Icon Resizer
 
 This tool can be used to resize iOS and Android application icons in batch. That is, given a 1024x1024 icon, this tool will generate all necessary icon sizes.
 
@@ -35,12 +35,15 @@ The `resize()` function's `options` argument takes the following optional parame
 
 * **platformsToBuild**: For which platforms should the icons be resized. Comma-separated list. Possible values ['ios', 'android']
 * **originalIconFilename**: The original image's relative path and filename such as '../someIcon.png'. Default: 'appicon_1024.png'.
-* **iosFilenamePrefix**: The prefix of the iOS image files. Default: 'Icon'.
+* **iosFilenamePrefix**: The prefix of the iOS image files. Default: 'Icon'. Could be empty (empty string) if you want to manage it in your config.js.
+* **iosRemoveAlpha**: Remove Alpha channel from your png for iTunes
+* **iosBackgroundColor**: The color of the background when removeAlpha = true
 * **iosOutputFolder**: The output folder for the iOS icons. Default: '.'.
 * **androidOutputFolder**: The output folder for the Android icons. Default: '.'.
 * **androidOutputFilename**: The output file name for the Android icons.
 * **androidBaseSize**: The base size, in pixels, to consider for the `baseRatio`calculation. Default: 48.
 * **config**: Optional path to a `.js` or `.json` file that defines the thumbnail size configuration. Default: use the built-in `config.js` file.
+
 
 ### Standalone Application
 
