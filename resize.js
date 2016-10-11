@@ -25,6 +25,10 @@ var optimist = require('optimist')
       describe: 'The output folder for the Android icons.',
       default: resize.defaults.ANDROID_OUTPUT_FOLDER
     })
+    .options('launchimageof', {
+      describe: 'The output folder for the iOS Launch images.',
+      default: resize.defaults.LAUNCH_IMAGE_FOLDER
+    })
     .options('androidofn', {
       describe: 'The output file name for the Android icons.'
     })
