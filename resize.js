@@ -25,7 +25,7 @@ var optimist = require('optimist')
       describe: 'The output folder for the Android icons.',
       default: resize.defaults.ANDROID_OUTPUT_FOLDER
     })
-    .options('launchimageof', {
+    .options('launchof', {
       describe: 'The output folder for the iOS Launch images.',
       default: resize.defaults.LAUNCH_IMAGE_FOLDER
     })
@@ -77,6 +77,10 @@ if (argv.iosof) {
 if (argv.androidof) {
   // Remove eventually existing trailing slash
   options.androidOutputFolder = argv.androidof.replace(/\/$/, "");
+}
+
+if (argv.launchof) {
+  options.iosLaunchImageFolder = argv.launchof.replace(/\/$/, "");
 }
 
 if (argv.androidofn) {
