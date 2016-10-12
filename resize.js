@@ -36,6 +36,10 @@ var optimist = require('optimist')
       describe: 'The base size, in pixels, for `baseRatio` sizing calculation.',
       default: resize.defaults.ANDROID_BASE_SIZE
     })
+    .options('bg', {
+      describe: 'The background color used to generate Launch Images.',
+      default: resize.defaults.BACKGROUND_COLOR
+    })
     .options('platforms', {
       describe: 'For which platforms should the icons be resized. Comma-separated list.\nPossible values: ' + resize.defaults.PLATFORMS_TO_BUILD.join(', '),
       default: resize.defaults.PLATFORMS_TO_BUILD.join(',')
@@ -89,6 +93,10 @@ if (argv.androidofn) {
 
 if (argv.androidbs) {
   options.androidBaseSize = argv.androidbs;
+}
+
+if (argv.bg) {
+  options.backgroundColor = argv.bg;
 }
 
 if (argv.input) {
