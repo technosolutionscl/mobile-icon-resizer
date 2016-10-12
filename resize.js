@@ -13,9 +13,9 @@ var optimist = require('optimist')
       alias: 'i',
       demand: true
     })
-    .options('iosprefix', {
-      describe: 'The prefix of the iOS image files.',
-      default: resize.defaults.IOS_FILE_NAME_PREFIX
+    .options('logo', {
+      describe: 'The input logo file path.',
+      alias: 'l',
     })
     .options('iosof', {
       describe: 'The output folder for the iOS icons.',
@@ -69,10 +69,6 @@ if (argv.version) {
 
 var options = {};
 
-if (argv.iosprefix) {
-  options.iosFilenamePrefix = argv.iosprefix;
-}
-
 if (argv.iosof) {
   // Remove eventually existing trailing slash
   options.iosOutputFolder = argv.iosof.replace(/\/$/, "");
@@ -101,6 +97,11 @@ if (argv.bg) {
 
 if (argv.input) {
   options.originalIconFilename = argv.input;
+  options.originalLogoFilename = argv.input;
+}
+
+if (argv.logo) {
+  options.originalLogoFilename = argv.logo;
 }
 
 if (argv.platforms) {

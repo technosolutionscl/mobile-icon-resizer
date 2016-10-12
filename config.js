@@ -5,70 +5,70 @@ var config = {
       {
         "size" : "29x29",
         "idiom" : "iphone",
-        "filename" : "-Small.png",
+        "filename" : "Icon-App-29x29.png",
         "scale" : "1x"
       },
       // iPad Retina Settings or iPhone Settings 
       {
         "size" : "29x29",
         "idiom" : "iphone",
-        "filename" : "-Small@2x.png",
+        "filename" : "Icon-App-29x29@2x.png",
         "scale" : "2x"
       },
       // iPhone Retina Settings 
       {
         "size" : "29x29",
         "idiom" : "iphone",
-        "filename" : "-Small@3x.png",
+        "filename" : "Icon-App-29x29@3x.png",
         "scale" : "3x"
       },
       // iPad Spotlight
       {
         "size" : "40x40",
         "idiom" : "iphone",
-        "filename" : "-40@.png",
+        "filename" : "Icon-App-40x40.png",
         "scale" : "1x"
       },
       // iPhone Spotlight
       {
         "size" : "40x40",
         "idiom" : "iphone",
-        "filename" : "-40@2x.png",
+        "filename" : "Icon-App-40x40@2x.png",
         "scale" : "2x"
       },
       // iPhone Retina Spotlight      
       {
         "size" : "40x40",
         "idiom" : "iphone",
-        "filename" : "-40@3x.png",
+        "filename" : "Icon-App-40x40@3x.png",
         "scale" : "3x"
       },
       // iPhone icon
       {
         "size" : "60x60",
         "idiom" : "iphone",
-        "filename" : "-60@2x.png",
+        "filename" : "Icon-App-60x60@2x.png",
         "scale" : "2x"
       },
       // iPhone Retina icon
       {
         "size" : "60x60",
         "idiom" : "iphone",
-        "filename" : "-60@3x.png",
+        "filename" : "Icon-App-60x60@3x.png",
         "scale" : "3x"
       },
       // iPad icon
       {
         "size" : "76x76",
         "idiom" : "ipad",
-        "filename" : "-76.png",
+        "filename" : "Icon-App-76x76.png",
         "scale" : "1x"
       },
       // iPad Retina icon
       {
         "size" : "76x76",
         "idiom" : "ipad",
-        "filename" : "-76@2x.png",
+        "filename" : "Icon-App-76x76@2x.png",
         "scale" : "2x"
       },
       // iPad Pro
@@ -76,20 +76,20 @@ var config = {
         "idiom":"ipad",
         "size":"83.5x83.5",
         "scale":"2x",
-        "filename":"-83.5@2x.png"
+        "filename":"Icon-App-83.5x83.5@2x.png"
       },
       // iTunes artwork
       {
         "size" : "512x512",
         "idiom" : "ipad",
-        "filename" : "-iTunesArtwork.png",
+        "filename" : "iTunesArtwork.png",
         "scale" : "1x"
       },
       // iTunes artwork
       {
         "size" : "512x512",
         "idiom" : "ipad",
-        "filename" : "-iTunesArtwork@2x.png",
+        "filename" : "iTunesArtwork@2x.png",
         "scale" : "2x"
       },
     ]
