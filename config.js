@@ -77,7 +77,7 @@ var config = {
         "size":"83.5x83.5",
         "scale":"2x",
         "filename":"-83.5@2x.png"
-      }
+      },
       // iTunes artwork
       {
         "size" : "512x512",
