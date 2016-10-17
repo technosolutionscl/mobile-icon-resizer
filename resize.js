@@ -38,7 +38,8 @@ var optimist = require('optimist')
     })
     .options('bg', {
       describe: 'The background color used to generate Launch Images.',
-      default: resize.defaults.BACKGROUND_COLOR
+      default: resize.defaults.BACKGROUND_COLOR,
+      alias: 'bg',
     })
     .options('platforms', {
       describe: 'For which platforms should the icons be resized. Comma-separated list.\nPossible values: ' + resize.defaults.PLATFORMS_TO_BUILD.join(', '),

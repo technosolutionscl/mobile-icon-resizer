@@ -98,31 +98,31 @@ var config = {
     "images" : [
       {
         "baseRatio" : "3/4",
-        "folder" : "drawable-ldpi"
+        "folder" : "mipmap-ldpi"
       },
       {
         "baseRatio" : "1",
-        "folder" : "drawable-mdpi"
+        "folder" : "mipmap-mdpi"
       },
       {
         "baseRatio" : "4/3",
-        "folder" : "drawable-tvdpi"
+        "folder" : "mipmap-tvdpi"
       },
       {
         "baseRatio" : "1.5",
-        "folder" : "drawable-hdpi"
+        "folder" : "mipmap-hdpi"
       },
       {
         "baseRatio" : "2",
-        "folder" : "drawable-xhdpi"
+        "folder" : "mipmap-xhdpi"
       },
       {
         "baseRatio" : "3",
-        "folder" : "drawable-xxhdpi"
+        "folder" : "mipmap-xxhdpi"
       },
       {
         "baseRatio" : "4",
-        "folder" : "drawable-xxxhdpi"
+        "folder" : "mipmap-xxxhdpi"
       },
       {
         // Image to upload to the Play Store
