@@ -123,11 +123,6 @@ var config = {
       {
         "baseRatio" : "4",
         "folder" : "mipmap-xxxhdpi"
-      },
-      {
-        // Image to upload to the Play Store
-        "size": "512x512",
-        "folder" : "WEB"
       }
     ]
   },
