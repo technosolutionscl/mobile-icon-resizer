@@ -1,6 +1,6 @@
 {
   "name": "mobile-icon-resizer",
-  "version": "0.4.2",
+  "version": "1.0.0",
   "description": "Batch iOS and Android icon resizing tool.",
   "main": "index.js",
   "bin": {
@@ -20,9 +20,10 @@
     "fs-extra": "0.26.2",
     "gm": "1.21.1",
     "image-size": "~0.5.0",
-    "mkdirp": "~0.3.5",
-    "mmmagic": "0.4.1",
-    "optimist": "~0.6.1"
+    "mathjs": "^3.1.4",
+    "mkdirp": "^0.3.5",
+	"mmmagic": "0.4.1",
+    "optimist": "^0.6.1"
   },
   "devDependencies": {
     "grunt": "~0.4.4",

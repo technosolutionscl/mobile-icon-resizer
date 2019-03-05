@@ -9,13 +9,13 @@ var optimist = require('optimist')
     .wrap(100)
     .usage('$0 OPTIONS')
     .options('input', {
-      describe: 'The prefix of the iOS image files.',
+      describe: 'The input file path.',
       alias: 'i',
-      default: resize.defaults.ORIGINAL_ICON_FILE_NAME
+      demand: true
     })
-    .options('iosprefix', {
-      describe: 'The prefix of the iOS image files.',
-      default: resize.defaults.IOS_FILE_NAME_PREFIX
+    .options('logo', {
+      describe: 'The input logo file path.',
+      alias: 'l',
     })
     .options('iosof', {
       describe: 'The output folder for the iOS icons.',
@@ -25,6 +25,10 @@ var optimist = require('optimist')
       describe: 'The output folder for the Android icons.',
       default: resize.defaults.ANDROID_OUTPUT_FOLDER
     })
+    .options('launchof', {
+      describe: 'The output folder for the iOS Launch images.',
+      default: resize.defaults.LAUNCH_IMAGE_FOLDER
+    })
     .options('androidofn', {
       describe: 'The output file name for the Android icons.'
     })
@@ -32,12 +36,21 @@ var optimist = require('optimist')
       describe: 'The base size, in pixels, for `baseRatio` sizing calculation.',
       default: resize.defaults.ANDROID_BASE_SIZE
     })
+    .options('bg', {
+      describe: 'The background color used to generate Launch Images.',
+      default: resize.defaults.BACKGROUND_COLOR,
+      alias: 'bg',
+    })
     .options('platforms', {
       describe: 'For which platforms should the icons be resized. Comma-separated list.\nPossible values: ' + resize.defaults.PLATFORMS_TO_BUILD.join(', '),
       default: resize.defaults.PLATFORMS_TO_BUILD.join(',')
     })
     .options('config', {
       describe: 'A file with custom thumbnail sizes configuration.'
+    })
+    .options('convertbin', {
+      describe: 'The file name of your ImageMagick convert executable. (See ReadMe for details)',
+      default: resize.defaults.CONVERT_BIN
     })
     .describe('v', 'Print the script\'s version.')
     .alias('v', 'version')
@@ -57,10 +70,6 @@ if (argv.version) {
 
 var options = {};
 
-if (argv.iosprefix) {
-  options.iosFilenamePrefix = argv.iosprefix;
-}
-
 if (argv.iosof) {
   // Remove eventually existing trailing slash
   options.iosOutputFolder = argv.iosof.replace(/\/$/, "");
@@ -71,6 +80,10 @@ if (argv.androidof) {
   options.androidOutputFolder = argv.androidof.replace(/\/$/, "");
 }
 
+if (argv.launchof) {
+  options.iosLaunchImageFolder = argv.launchof.replace(/\/$/, "");
+}
+
 if (argv.androidofn) {
   options.androidOutputFilename = argv.androidofn.replace(/\/$/, "");
 }
@@ -79,8 +92,17 @@ if (argv.androidbs) {
   options.androidBaseSize = argv.androidbs;
 }
 
+if (argv.bg) {
+  options.backgroundColor = argv.bg;
+}
+
 if (argv.input) {
   options.originalIconFilename = argv.input;
+  options.originalLogoFilename = argv.input;
+}
+
+if (argv.logo) {
+  options.originalLogoFilename = argv.logo;
 }
 
 if (argv.platforms) {
@@ -89,6 +111,10 @@ if (argv.platforms) {
 
 if (argv.config) {
   options.config = argv.config;
+}
+
+if (argv.convertbin) {
+  options.convertBin = argv.convertbin;
 }
 
 resize(options, function (err) {
