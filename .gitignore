@@ -3,6 +3,8 @@ dump.rdb
 /nbproject/private/
 /node_modules/
 
+*.code-workspace
+
 lib-cov
 *.seed
 *.log
